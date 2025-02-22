@@ -55,7 +55,8 @@
     header nav a{
         text-decoration: none;
         position: relative;
-        color: white
+        color: white;
+        font-size: 15px;
     }
 
     nav a::after {
