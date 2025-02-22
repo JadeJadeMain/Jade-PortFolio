@@ -39,6 +39,7 @@
         justify-content: space-evenly;
         padding: 5px 10px;
         background-color: black;
+       z-index: 100;
 
     }
 
