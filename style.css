@@ -167,10 +167,14 @@
     main .message{
         margin-top: 10px;
         padding: 10px;
+        background-color: rgba(128, 128, 128, 0.347);
+        padding: 10px;
+        border-radius: 10px;
     }
 
     .message .text{
         color: white;
+        width: 100%;
         text-align: justify;
         line-height: 30px;
         font-size: 20px;
@@ -224,4 +228,74 @@
         -moz-box-shadow: 23px -4px 101px 33px rgba(22,9,168,0.91);
         box-shadow: 23px -4px 101px 33px rgba(22,9,168,0.91);;
     }
+
+    .contacts{
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.347);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    .contacts h2{
+        color: white;
+    }
+
+    .contacts .Phone, 
+    .contacts .email{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        color: white;
+        
+    }
+
+    .contacts .email a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .contacts .Phone .number{
+       visibility: hidden ;
+       opacity: 0;
+       transition: opacity .8s ease
+    }
+
+    .contacts .Phone:hover .number{
+        visibility: visible;
+        cursor: pointer;
+        opacity: 1;
+        
+    }
+
+    .contacts .Phone .number{
+        color: cyan;
+        background-color: coral;
+        padding: 2px;
+        border-radius: 3px;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        position: relative;
+    }
+
+    .contacts .Phone .number::after{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid coral; 
+        left: -14px;
+        transform: rotate(180deg);
+    }
 }
+
