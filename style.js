@@ -26,3 +26,16 @@ function animate(){
    
 }
 animate();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Show popup when the page loads
+    document.getElementById("popupOverlay").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+
+    // Close popup on button click
+    document.getElementById("closePopup").addEventListener("click", function () {
+        document.getElementById("popupOverlay").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    });
+});
