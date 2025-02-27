@@ -1,4 +1,16 @@
+body .background,
+body  main,
+body header{
+    visibility: hidden;
+    
+}
 
+body .content{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    color: red;
+}
 
 @media screen  and (max-width: 600px){
 
@@ -21,10 +33,44 @@
         padding: 5px;
     }
 
+    body .content{
+        visibility: hidden;
+    }
+
+    body .background,
+    body  main,
+    body header{
+        visibility: visible;   
+    }
+
+    @keyframes smoothScrool {
+        from{opacity: 0;
+            scale: .5;}
+        t0{opacity: 1;
+            scale: 1;}
+    }
+
     main::-webkit-scrollbar{
         display: none;
     }
+
+    .scroolWatcher{
+        height: 4px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 1000;
+        background-color: cyan;
+        animation: scroolWatcher linear;
+        animation-timeline: scroll();
+        transform-origin: left;
+        scale: 0 1;
+    }
     
+
+    @keyframes scroolWatcher {
+        to{scale: 1 1;}
+    }
     .background {
         width: 100%;
         height: 100%;
@@ -150,6 +196,7 @@
         flex-direction: column;
         align-items: center;
         gap: 5px;
+        
     }
 
     .picture span{
@@ -195,6 +242,10 @@
     }
 
     main .message{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
         margin-top: 10px;
         padding: 10px;
         background-color: rgba(128, 128, 128, 0.347);
@@ -202,27 +253,40 @@
         border-radius: 10px;
     }
 
+
     .message .text{
         color: white;
-        width: 100%;
         text-align: justify;
-        line-height: 30px;
+        line-height: 40px;
         font-size: 20px;
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover;
+        animation-range-end: contain;
     }
-
+    @keyframes fadein {
+        from{scale: 0.8; opacity: 0;}
+        to{scale: 1; opacity: 1;}
+    }
     .message .jade{
         color: brown;
     }
 
     .Technologies h2{
         color: white;
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover ;
+        animation-range-end: contain 200px;
     }
 
     .Technologies{
         width: 100%;
+        height: 50vh;
         margin-top: 20px;
         background-color: rgba(128, 128, 128, 0.347);
         text-align: center;
+        justify-content: center;
         display: flex;
         flex-direction: column;
         padding: 3.125rem;
@@ -237,7 +301,13 @@
         gap: 50px;
         margin-top: 30px;
         gap: 30px;
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover;
+        animation-range-end: contain;
     }
+
+    
 
     .Technologies .laguages .lang{
        width: 100%;
@@ -276,6 +346,10 @@
     }
     .contacts h2{
         color: white;
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover ;
+        animation-range-end: contain 200px;
     }
 
     .contacts .Phone, 
@@ -286,6 +360,10 @@
         justify-content: start;
         position: relative;
         color: white;
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover ;
+        animation-range-end: contain 200px;
         
     }
 
@@ -367,6 +445,7 @@
 
     form{
         width: 100%;
+        height: 80vh;
         background-color: rgba(128, 128, 128, 0.347);
         margin-top: 10px;
         padding: 5px;
@@ -374,12 +453,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
+        justify-content: center;
+        gap: 20px;
     }
 
     form h2{
         color: white;
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover ;
+        animation-range-end: contain 200px;
     }
 
     form input{
@@ -402,6 +485,15 @@
         font-size: 12px;
     }
 
+    form input,
+    form textarea,
+    form button{
+        animation: fadein linear;
+        animation-timeline: view();
+        animation-range-start: cover ;
+        animation-range-end: contain 200px;
+    }
+
     form button{
         width: 40%;
         border: none;
@@ -410,7 +502,7 @@
         border-radius: 5px;
         background-color: cyan;
         font-weight: 700;
-        background: linear-gradient(to left, transparent, #05a6c3); /* Initial gradient */
+        background: linear-gradient(to left, transparent, #14d0f1, #14d0f1); /* Initial gradient */
         border: none;
         border-radius: 8px;
         cursor: pointer;
@@ -419,7 +511,7 @@
     }
 
     form button:hover{
-        background: linear-gradient(to right, #05a6c3, transparent); /* Gradient changes direction */
+        background: linear-gradient(to right, #14d0f1, transparent); /* Gradient changes direction */
     }
 }
 
