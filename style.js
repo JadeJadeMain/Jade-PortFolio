@@ -57,6 +57,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     let Useremail = document.getElementById('email');
     let UsreMessage = document.getElementById('message');
     let buttonSend = document.getElementById('btnSend');
+    let buttonClear = document.querySelector('.clear');
 
 
     let serviceID = "service_6bamp6j";  // Your Service ID
@@ -67,6 +68,15 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         from_email: document.getElementById("email").value,
         message: document.getElementById("message").value
     };
+
+
+    buttonClear.addEventListener('click', btnClearText);
+
+    function btnClearText(){
+        UsreMessage.value = "";
+        console.log('dleted');
+    }
+
 
     emailjs.send(serviceID, templateID, templateParams)
         .then(function(response) {

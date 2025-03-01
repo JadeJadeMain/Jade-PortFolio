@@ -478,11 +478,14 @@ body .content{
         resize: none;
         border: none;
         outline: none;
-        width: 50%;
+        width: 70%;
+        height: 150px;
         border-radius: 10px;
         text-align: center;
-        padding-top: 10px;
+        padding: 40px 10px;
         font-size: 12px;
+        font-weight: 700;
+        text-transform: capitalize;
     }
 
     form input,
@@ -494,7 +497,15 @@ body .content{
         animation-range-end: contain 200px;
     }
 
-    form button{
+    form .btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    form .btn button{
         width: 40%;
         border: none;
         outline: none;
@@ -510,7 +521,7 @@ body .content{
         transition: background 1s ease-in-out;
     }
 
-    form button:hover{
+    form .btn button:hover{
         background: linear-gradient(to right, #14d0f1, transparent); /* Gradient changes direction */
     }
 }
