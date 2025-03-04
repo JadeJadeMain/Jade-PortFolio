@@ -505,7 +505,7 @@ body .content{
         gap: 10px;
     }
 
-    form .btn button{
+    form button{
         width: 40%;
         border: none;
         outline: none;
@@ -521,7 +521,7 @@ body .content{
         transition: background 1s ease-in-out;
     }
 
-    form .btn button:hover{
+    form  button:hover{
         background: linear-gradient(to right, #14d0f1, transparent); /* Gradient changes direction */
     }
 }
