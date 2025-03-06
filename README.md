@@ -1,31 +1,26 @@
 # Jade-PortFolio
 
-## About Me
+About Me
 
 Hello! My name is Jade Formentera. I am a passionate software developer with a keen interest in creating innovative solutions. My portfolio showcases a variety of projects that highlight my skills in different programming languages and technologies.
 
-## Projects
+Projects
 
-### Project 1: [Project Name]
-- **Description:** Brief description of the project.
-- **Technologies Used:** List of technologies used.
-- **Link:** [GitHub Repository or Live Demo]
-
-### Project 2: [Project Name]
-- **Description:** Brief description of the project.
-- **Technologies Used:** List of technologies used.
-- **Link:** [GitHub Repository or Live Demo]
+* No projects
 
 ## Skills
 
-- Programming Languages: List of languages
-- Frameworks and Libraries: List of frameworks and libraries
-- Tools and Platforms: List of tools and platforms
+- Programming Languages: 
+- JavaScript
+- C++
+- Java
+- php
+
+# BackEnd
+- MySql
 
 ## Contact
 
-- **Email:** [Your Email]
-- **LinkedIn:** [Your LinkedIn Profile]
-- **GitHub:** [Your GitHub Profile]
+- Email:jadecotongan@gmail.com
 
-Feel free to explore my projects and get in touch if you have any questions or opportunities!
+
