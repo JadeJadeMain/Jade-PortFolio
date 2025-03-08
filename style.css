@@ -402,7 +402,7 @@ body .content{
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         position: relative;
         color: white;
         animation: fadein linear;
